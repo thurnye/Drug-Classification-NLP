@@ -17,7 +17,8 @@
 - Data is available at `./Model/_DATA_`
 - Dataloader is available at `./Model/data`
 - To run the training script, place the dataset from DrugBank, go to `./Model/` folder and run: `python train-ngram.py`
-- To change parameters, you can check and edit `145-165` no lines of `./Model/train-ngram.py`
+- Changes of parameters are done `145-165` no lines of `./Model/train-ngram.py`
+-To see the experimental result run the script in the `./result_summary.py`
 
 # Experimental Results
 
