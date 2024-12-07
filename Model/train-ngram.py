@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import copy
-
+import os
 import torch
 from torch import nn
 from torch.optim import Adam
@@ -155,11 +155,11 @@ if __name__ == "__main__":
     ratio_test = 0.2
     batch_size = 32
     # model settings
-    n = 5
+    n = 3
     dropout = 0.1
     size_hidden = [512, 256, 128, 32]
     # training settings
-    n_epochs = 200
+    n_epochs = 150
     lr = 3e-5
     weight_decay = 0
 
@@ -180,6 +180,9 @@ if __name__ == "__main__":
             lr,
         )
         log_file = f"./scores/MLP/{seed}-seed--{n}-gram--topk-{topk}--lr-{lr}.csv"
+        
+        os.makedirs(os.path.dirname(log_file), exist_ok=True)
+
         with open(log_file, "a") as f:
             f.write("pred,true\n")
             for p, t in zip(y_pred, y_true):
