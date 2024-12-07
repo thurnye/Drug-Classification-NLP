@@ -155,7 +155,7 @@ if __name__ == "__main__":
     ratio_test = 0.2
     batch_size = 32
     # model settings
-    n = 3
+    n = 5
     dropout = 0.1
     size_hidden = [512, 256, 128, 32]
     # training settings
